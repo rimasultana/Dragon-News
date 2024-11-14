@@ -1,6 +1,8 @@
+import { Outlet } from "react-router-dom";
 import Header from "../Components/Header/Header";
 import LatestNews from "../Components/LatestNews/LatestNews";
 import Leftside from "../Components/Layout-components/Leftside";
+import RightSide from "../Components/Layout-components/RightSide";
 import Navbar from "../Components/Navbar/Navbar";
 
 const HomeLayOut = () => {
@@ -17,8 +19,12 @@ const HomeLayOut = () => {
         <div className="left col-span-3">
             <Leftside/>
         </div>
-        <div className="col-span-6">main Content</div>
-        <div className="col-span-3">right side</div>
+        <div className="col-span-6">
+           <Outlet/>
+        </div>
+        <div className="col-span-3">
+            <RightSide/>
+        </div>
       </main>
     </div>
   );
